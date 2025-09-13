@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume | Walter White</title>
+  <meta name="description" content="Resume — Walter White">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#4f46e5;
+      --primary-light:#7c83ff;
+      --text:#0b1220;
+      --text-light:#495266;
+      --bg:#ffffff;
+      --muted:#f5f7fb;
+      --ring:0 0 0 8px rgba(99,102,241,0.08);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.65;
+    }
+    .container{width:92%;max-width:900px;margin:0 auto;padding:28px 0}
+    header{
+      position:sticky;top:0;background:rgba(255,255,255,.75);
+      backdrop-filter:saturate(160%) blur(8px);
+      border-bottom:1px solid rgba(15,23,42,.08);
+      z-index:10;
+    }
+    nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{font-weight:800;letter-spacing:.2px;color:var(--primary);text-decoration:none}
+    .actions{display:flex;gap:10px}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 16px;border-radius:10px;border:2px solid var(--primary);
+      background:transparent;color:var(--primary);font-weight:600;text-decoration:none;
+      transition:.2s ease;
+    }
+    .btn:hover{background:var(--primary);color:#fff;transform:translateY(-1px)}
+    .btn.primary{
+      background:linear-gradient(135deg,var(--primary),var(--primary-light));border-color:transparent;color:#fff;
+      box-shadow:0 10px 22px rgba(79,70,229,.18)
+    }
+    h1{font-size:2rem;letter-spacing:-.02em;margin:10px 0 4px}
+    .subtitle{color:var(--text-light);margin-bottom:18px}
+    .meta{display:flex;flex-wrap:wrap;gap:12px;color:var(--text-light);font-size:.98rem;margin-bottom:26px}
+    .resume{
+      background:#fff;border:1px solid rgba(99,102,241,.12);border-radius:14px;padding:26px;
+      box-shadow:0 10px 28px rgba(2,6,23,.08);
+    }
+    .grid{display:grid;grid-template-columns:1fr;gap:22px}
+    .section{padding-top:8px}
+    .section-title{font-size:1.05rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
+    .card{padding:16px;border:1px solid rgba(15,23,42,.08);border-radius:12px;background:var(--muted)}
+    .role{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:6px}
+    .role h3{font-size:1.05rem;letter-spacing:-.01em}
+    .role span{color:var(--text-light);font-size:.95rem}
+    ul{margin-left:18px}
+    li{margin:6px 0}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .tag{background:#eef0ff;border:1px solid rgba(79,70,229,.18);color:#3730a3;border-radius:999px;padding:6px 10px;font-size:.9rem;font-weight:600}
+    footer{color:var(--text-light);text-align:center;margin:18px 0 34px}
+
+    /* Print styles */
+    @media print{
+      header, .actions, footer { display:none !important; }
+      body{background:#fff}
+      .container{max-width:100%;width:100%;padding:0}
+      .resume{border:none;box-shadow:none;padding:0}
+      .card{border:none;background:transparent;padding:0}
+      .tag{border:1px solid #999;background:#fff;color:#000}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="brand">BB MOFO</a>
+        <div class="actions">
+          <a class="btn" href="index.html">← Back</a>
+          <a class="btn" href="resume.pdf" download>Download PDF</a>
+          <button class="btn primary" onclick="window.print()">Print</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="resume" aria-label="Resume">
+      <h1>Walter White</h1>
+      <p class="subtitle">Builder • Strategist • Problem‑solver</p>
+      <div class="meta">
+        <span>Albuquerque, NM</span>
+        <span>•</span>
+        <span><a href="mailto:your@email.com">your@email.com</a></span>
+        <span>•</span>
+        <span><a href="https://github.com/yourhandle" target="_blank" rel="noopener">github.com/yourhandle</a></span>
+        <span>•</span>
+        <span><a href="https://www.linkedin.com/in/yourhandle" target="_blank" rel="noopener">linkedin.com/in/yourhandle</a></span>
+      </div>
+
+      <div class="grid">
+        <section class="section">
+          <h2 class="section-title">Experience</h2>
+
+          <div class="card">
+            <div class="role">
+              <h3>Operations Architect — Independent</h3>
+              <span>2010 — 2012</span>
+            </div>
+            <ul>
+              <li>Designed high‑purity production processes with end‑to‑end quality control and traceability.</li>
+              <li>Scaled logistics and distribution with covert redundancy and risk mitigation.</li>
+              <li>Built cross‑functional SOPs to reduce defects and accelerate throughput.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Process Engineering</span>
+              <span class="tag">QA</span>
+              <span class="tag">Ops</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="role">
+              <h3>Chemistry Educator — J.P. Wynne High School</h3>
+              <span>2002 — 2009</span>
+            </div>
+            <ul>
+              <li>Developed curriculum for AP chemistry focused on fundamentals and lab precision.</li>
+              <li>Mentored students toward competitive science fair outcomes.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Education</span>
+              <span class="tag">Curriculum</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Projects</h2>
+          <div class="card">
+            <div class="role">
+              <h3>Blue Crystal Process</h3>
+              <span>R&amp;D</span>
+            </div>
+            <ul>
+              <li>Novel crystallization technique achieving 99.1% assay purity.</li>
+              <li>Standardized cleanroom‑style protocols for consistent outcomes.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">R&amp;D</span>
+              <span class="tag">Purity Control</span>
+              <span class="tag">SOPs</span>
+            </div>
+          </div>
+          <div class="card" style="margin-top:12px">
+            <div class="role">
+              <h3>Mobile Lab Build</h3>
+              <span>Deployment</span>
+            </div>
+            <ul>
+              <li>Portable facility with airflow, filtration, and stealth constraints.</li>
+              <li>Emergency protocols and redundancy for field conditions.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Field Ops</span>
+              <span class="tag">Infra</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Skills</h2>
+          <div class="card">
+            <div class="tags">
+              <span class="tag">Chemistry</span>
+              <span class="tag">Process Design</span>
+              <span class="tag">Leadership</span>
+              <span class="tag">Risk Management</span>
+              <span class="tag">Logistics</span>
+              <span class="tag">Problem‑solving</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Education</h2>
+          <div class="card">
+            <div class="role">
+              <h3>M.S., Chemistry — Caltech</h3>
+              <span>—</span>
+            </div>
+            <ul>
+              <li>Focus on crystallography and reaction kinetics.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2025 Walter White. Update this page with your real details to finalize.</div>
+  </footer>
+</body>
+</html>
